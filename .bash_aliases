@@ -1,0 +1,10 @@
+### GIT
+alias glg='git log --graph --pretty=oneline --abbrev-commit --decorate --all'
+alias gl='git log'
+alias gd='git diff'
+alias gba='git branch -a'
+alias gs='git status'
+alias gc='git commit'
+alias gm='git merge'
+alias gco='git checkout'
+alias gce='git config --global e'
