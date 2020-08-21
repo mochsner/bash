@@ -35,6 +35,8 @@ alias 'erd3'="xfreerdp /multimon /u:mochsner /v:10.15.95.13 /d:epic.com /dynamic
 
 
 # File / Directory Navigation
+alias explore="nautilus . &"
+alias iexplore="nautilus . --browser &"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -73,8 +75,20 @@ function bd(){
   fi
 }
 
+
 # Misc
 export CLASSPATH=$CLASSPATH:~/code/path/algs4.jar
 
 # OS
 alias hibernate="systemctl hibernate"
+
+# ~/.bashrc
+function mkcd {
+  if [ ! -n "$1" ]; then
+    echo "Enter a directory name"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+  else
+    mkdir $1 && cd $1
+  fi
+}
