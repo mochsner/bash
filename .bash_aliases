@@ -92,3 +92,13 @@ function mkcd {
     mkdir $1 && cd $1
   fi
 }
+
+
+# Microsoft Windows WSL Aliases
+#if grep -q Microsoft /proc/version; then
+	vs19 () { /mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/Common7/IDE/devenv.exe "$@" & }
+	vs17 () { /mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Community/Common7/IDE/devenv.exe "$@" & }
+#alias wzhome="/mnt/c/Users/Marc\ Ochsner/source/repos"
+alias wzhome='cd "/mnt/c/Users/Marc\ Ochsner/source/repos"'
+#fi
+
