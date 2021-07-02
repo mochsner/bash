@@ -93,6 +93,7 @@ function mkcd {
   fi
 }
 
+function sedPath { path=$((echo $1|sed -r 's/([\$\.\*\/\[\\^])/\\\1/g'|sed 's/[]]/\[]]/g')>&1) } #Escape path for use with sed
 
 # Microsoft Windows WSL Aliases
 #if grep -q Microsoft /proc/version; then
